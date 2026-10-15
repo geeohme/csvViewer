@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Dump Explorer</title>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">CSV Dump Explorer</div>
+      <div id="fileinfo" class="fileinfo"></div>
+      <div class="spacer"></div>
+      <button id="btn-open" class="btn primary">Open CSV…</button>
+      <input type="file" id="file-input" accept=".csv,.tsv,.txt,.psv,text/csv" hidden />
+    </header>
+    <div class="layout">
+      <aside id="sidebar" class="sidebar"></aside>
+      <main id="main" class="main"></main>
+    </div>
+    <div id="overlay" class="overlay" hidden>
+      <div class="overlay-card">
+        <div id="overlay-stage">Loading…</div>
+        <div class="bar"><div id="overlay-bar"></div></div>
+      </div>
+    </div>
+    <div id="drop-hint" class="drop-hint" hidden>Drop the CSV to load it</div>
+    <div id="toast" class="toast" hidden></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
